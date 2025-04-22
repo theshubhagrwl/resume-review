@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -38,16 +38,17 @@ const PLANS = {
 };
 
 export default function PurchasePage({ params }) {
+  const unwrappedParams = use(params);
   const [plan, setPlan] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Get plan details based on the URL parameter
-    const planSlug = params.plan.toLowerCase();
+    const planSlug = unwrappedParams.plan.toLowerCase();
     if (PLANS[planSlug]) {
       setPlan(PLANS[planSlug]);
     }
-  }, [params.plan]);
+  }, [unwrappedParams.plan]);
 
   const handlePayment = async () => {
     setLoading(true);
