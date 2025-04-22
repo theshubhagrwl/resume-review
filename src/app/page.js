@@ -119,7 +119,7 @@ export default function Home() {
                 key={i}
                 className='bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow'
               >
-                <p className='mb-4 italic'>"{testimonial.text}"</p>
+                <p className='mb-4 italic'>&quot;{testimonial.text}&quot;</p>
                 <div className='flex items-center'>
                   <Image
                     src={testimonial.avatar}

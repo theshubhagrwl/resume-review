@@ -109,7 +109,7 @@ export default function PurchasePage({ params }) {
       <div className='max-w-md mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden'>
         <div className='bg-blue-600 dark:bg-blue-700 py-6 px-8 text-white'>
           <h1 className='text-2xl font-bold'>Complete Your Purchase</h1>
-          <p className='mt-1 opacity-90'>You're almost there!</p>
+          <p className='mt-1 opacity-90'>You&apos;re almost there!</p>
         </div>
 
         <div className='p-8'>
@@ -128,7 +128,7 @@ export default function PurchasePage({ params }) {
           </div>
 
           <div className='mb-6'>
-            <h3 className='font-semibold mb-2'>What's included:</h3>
+            <h3 className='font-semibold mb-2'>What&apos;s included:</h3>
             <ul className='space-y-2'>
               {plan.features.map((feature, index) => (
                 <li key={index} className='flex items-start'>
